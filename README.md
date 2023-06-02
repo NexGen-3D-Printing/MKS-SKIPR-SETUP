@@ -1,8 +1,10 @@
 # MKS-CANBUS
 Setting Up CANBUS ON the SKIPR and THR
 
-Download the image you like
-Install in the SD Card or eMMC via BalenaEtcher
+Download the image file fome here: https://github.com/redrathnure/armbian-mkspi/releases
+
+Install in the SD Card or eMMC via Rufus: https://rufus.ie/en/
+
 Check the size of the system partition, maybe you need to rezise it, (leave 500MB free at the end).
 Turn on, get the IP from the LCD (cable or wireless)
 Log in as root, pass 1234, folow steps in the console
