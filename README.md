@@ -33,4 +33,10 @@ Once that has completed (the update, not the beer), type: sudo reboot
 
 After the reboot has complete, log back into the board using: ssh nexgen3d@192.168.0.123 (Use your user name you set in the previous step, and replace the IP with the IP of your actula board)
 
-Install Klipper via: https://github.com/th33xitus/kiauh
+Now we are getting to the good part, installing Klipper, make sure you are in your home folder, by typing: cd ~
+
+Then type: cd ~ && git clone https://github.com/th33xitus/kiauh.git
+
+Once completed, then type: ./kiauh/kiauh.sh
+
+
