@@ -40,3 +40,6 @@ Then type: cd ~ && git clone https://github.com/th33xitus/kiauh.git
 Once completed, then type: ./kiauh/kiauh.sh
 
 
+scp nexgen3d@192.68.0.123:~/klipper/out/klipper.bin C:\klipper\klipper.bin
+
+
