@@ -23,9 +23,14 @@ Once that has all complete, type: exit
 
 Then log back into the board using: ssh nexgen3d@192.168.0.123 (Use your user name you set in the previous step, and replace the IP with the IP of your actula board)
 
+Now run: sudo apt update
 
-Log in as the user you created
-apt update, apt upgrade
+Once that has completed, run: sudo apt upgrade
+
+Once that has completed, type: sudo reboot
+
+After the reboot has complete, log back into the board using: ssh nexgen3d@192.168.0.123 (Use your user name you set in the previous step, and replace the IP with the IP of your actula board)
+
 Turn on the internal PINs for ADXL345: https://www.klipper3d.org/RPi_microcontroller.html?h=gpio
 Turn on the PINS via armbian-config > System > Hardware - toggle on the option there, confim and reboot
 Install Klipper via: https://github.com/th33xitus/kiauh
