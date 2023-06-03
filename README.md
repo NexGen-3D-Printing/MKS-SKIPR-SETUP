@@ -44,4 +44,6 @@ scp nexgen3d@192.68.0.123:~/klipper/out/klipper.bin C:\klipper\klipper.bin
 
 MCU-TF Slot
 
+Changed TRSYNC_TIMEOUT value in “/home/pi/klipper/klippy/mcu.py” file from 0.025 to 0.050, i.e. was “TRSYNC_TIMEOUT = 0.025”, and became “TRSYNC_TIMEOUT = 0.050”, and the error “Communication timeout during homing probe” disappeared, and BL-Touch now works as it should.
+
 
