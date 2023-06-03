@@ -27,7 +27,7 @@ Now run: sudo apt update
 
 Once that has completed, run: sudo apt upgrade
 
-Go have a coffee, or a beer, the later is prefered.
+Go have a coffee, or a beer, the latter is prefered.
 
 Once that has completed (the update, not the beer), type: sudo reboot
 
