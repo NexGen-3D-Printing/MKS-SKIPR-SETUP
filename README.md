@@ -46,4 +46,8 @@ MCU-TF Slot
 
 Changed TRSYNC_TIMEOUT value in “/home/pi/klipper/klippy/mcu.py” file from 0.025 to 0.050, i.e. was “TRSYNC_TIMEOUT = 0.025”, and became “TRSYNC_TIMEOUT = 0.050”, and the error “Communication timeout during homing probe” disappeared, and BL-Touch now works as it should.
 
+Install Input Shaper:
+sudo apt install python3-numpy python3-matplotlib libatlas-base-dev
+~/klippy-env/bin/pip install -v numpy
+
 
