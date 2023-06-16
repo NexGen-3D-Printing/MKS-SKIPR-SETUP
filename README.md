@@ -31,7 +31,7 @@ Go have a coffee, or a beer, the latter is prefered.
 
 Once that has completed (the update, not the beer), type: sudo reboot
 
-After the reboot has complete, log back into the board using: ssh nexgen3d@192.168.0.123 (Use your user name you set in the previous step, and replace the IP with the IP of your actula board)
+After the reboot has complete, log back into the board using: ssh nexgen3d@192.168.0.123 (Use your user name you set in the previous step, and replace the IP with the IP of your actual board)
 
 Now we are getting to the good part, installing Klipper, make sure you are in your home folder, by typing: cd ~
 
@@ -39,12 +39,18 @@ Then type: cd ~ && git clone https://github.com/th33xitus/kiauh.git
 
 Once completed, then type: ./kiauh/kiauh.sh
 
+You should now see the KIAUH interface, and we will use this to install Klipper and all required componants.
+
+Select Option 1: Install -> Select Option 1: Klipper -> Select Option 1: Python 3.x -> Leave the next option as 1 and hit enter.
+
+Now the base files for Klipper are being install, you should receive a prompt for your password, completed that and press enter.
+
+Coffee time again :) wait for all the packages to install, once completed you will be back into the KIAUH interface.
+
 
 scp nexgen3d@192.68.0.123:~/klipper/out/klipper.bin C:\klipper\klipper.bin
 
 MCU-TF Slot
-
-Changed TRSYNC_TIMEOUT value in “/home/pi/klipper/klippy/mcu.py” file from 0.025 to 0.050, i.e. was “TRSYNC_TIMEOUT = 0.025”, and became “TRSYNC_TIMEOUT = 0.050”, and the error “Communication timeout during homing probe” disappeared, and BL-Touch now works as it should.
 
 Install Input Shaper:
 sudo apt install python3-numpy python3-matplotlib libatlas-base-dev
