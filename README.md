@@ -62,6 +62,10 @@ Next we will install Klipperscreen, I support the 3.5" and 5" displays from Make
 
 Select Option: 5 -> Klipperscreen -> Again, more crazy stuff happening, just wait for all the cool code like stuff to complete, this one can take a while, so more coffee, or maybe beer :)
 
+Now last module to install, only if you plan to use a USB webcam, if you are, please be aware of the very small 5v power budget of the MKS-SKIPR, the USB 5v is shared with SOC and can be limiting, so you may want to invest in a powered USB Hub, try and find one that is powered by a 24v power brick, as this will simplify your wiring, I'm personally not a fan of those little cheap buck conveters, I have had them fail to many times in the past, most printers work onj 24v, so try to use 24v parts.
+
+Select Option 11: Crowsnest -> Again, more hacker like cool movie code like stuff.
+
 
 
 
