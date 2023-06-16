@@ -1,5 +1,6 @@
 # MKS-CANBUS
-Setting Up CANBUS ON the SKIPR and THR
+
+Setting Up Klipper ON the MKS-SKIPR Main Controll Board and the THR36/42 Tool Head Board
 
 Download the image file fome here: https://github.com/redrathnure/armbian-mkspi/releases
 
