@@ -42,11 +42,29 @@ Once completed, then type: ./kiauh/kiauh.sh
 
 You should now see the KIAUH interface, and we will use this to install Klipper and all required componants.
 
-Select Option 1: Install -> Select Option 1: Klipper -> Select Option 1: Python 3.x -> Leave the next option as 1 and hit enter.
+Select Option 1: Install -> We will return to this menu after each module has installed.
+
+Select Option 1: Klipper -> Select Option 1: Python 3.x -> Leave the next option as 1 and hit enter.
 
 Now the base files for Klipper are being install, you should receive a prompt for your password, completed that and press enter.
 
 Coffee time again :) wait for all the packages to install, once completed you will be back into the KIAUH interface.
+
+We are now ready to install the next module, Moonraker, no not he James Bond film, but the Moonraker componant for Klipper.
+
+In the KIAH Interface, Select Option 2: Moonraker -> You will now see a promt to install, please type Y and hit enter, now wait for all the gobbledy-Gook to complete....again.
+
+After all that has completed, you will be back in the KIAUH Interface again, and we are now ready to install the GUI/Interface of your choice, for me, I like Mainsail, but you might not, so install the one of your choice, but for the printers, control boards and upgrade kits I sell, I only support Mainsail, I do this as its easier for me to assist my customers.
+
+Select Option 3: Mainsail -> more of that gobbly-gook, wait, then another prompt to download macros, type Y and press enter, after thats completed, you will be back in the KIAUH interface.
+
+Next we will install Klipperscreen, I support the 3.5" and 5" displays from Makerbase, the controlboard can run other HDMI displays, if you are not planning on running a touchscreen, then you can skip this next module.
+
+Select Option: 5 -> Klipperscreen -> Again, more crazy stuff happening, just wait for all the cool code like stuff to complete, this one can take a while, so more coffee, or maybe beer :)
+
+
+
+
 
 
 scp nexgen3d@192.68.0.123:~/klipper/out/klipper.bin C:\klipper\klipper.bin
