@@ -66,6 +66,10 @@ Now last module to install, only if you plan to use a USB webcam, if you are, pl
 
 Select Option 11: Crowsnest -> Again, more hacker like cool movie code like stuff.
 
+You will see a promt asking to add this module to the update module, should already have Y typed on the screen, so just press enter, this just adds Cowsnest to the nice GUI update menu in Mainsail make it a simple procedure to update the software in the future....we hope :)
+
+And lastly, you will see a prompt to rebbot now, change the N to a Y and press enter.
+
 
 
 
