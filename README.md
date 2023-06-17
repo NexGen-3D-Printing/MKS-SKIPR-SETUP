@@ -1,8 +1,10 @@
 # MKS-CANBUS
 
+# Section 1: Install the Operating System on The MKS-SKIPR (Also The MKS-PI)
+
 Setting Up Klipper ON the MKS-SKIPR Main Controll Board and the THR36/42 Tool Head Board
 
-Download the image file fome here: https://github.com/redrathnure/armbian-mkspi/releases
+Download the image file from here: https://github.com/redrathnure/armbian-mkspi/releases
 
 Install in the SD Card or eMMC via Rufus: https://rufus.ie/en/
 
@@ -22,7 +24,7 @@ Now it will ask you to set a password for root, once that is completed it will a
 
 Once that has all complete, type: exit
 
-Then log back into the board using: ssh nexgen3d@192.168.0.123 (Use your user name you set in the previous step, and replace the IP with the IP of your actula board)
+Then log back into the board using: ssh nexgen3d@192.168.0.123 (Use your user name you set in the previous step, and replace the IP with the IP of your actual board)
 
 Now run: sudo apt update
 
@@ -33,6 +35,8 @@ Go have a coffee, or a beer, the latter is prefered.
 Once that has completed (the update, not the beer), type: sudo reboot
 
 After the reboot has complete, log back into the board using: ssh nexgen3d@192.168.0.123 (Use your user name you set in the previous step, and replace the IP with the IP of your actual board)
+
+# Section 2: Install Klipper
 
 Now we are getting to the good part, installing Klipper, make sure you are in your home folder, by typing: cd ~
 
@@ -74,7 +78,7 @@ Give it a minute or two to reboot and log back in using SSH again, this image of
 
 Once you back into the system, we will now prepare, creat and download the Klipper firmware files we need to flash to the control boards.
 
-# SECTION: 5 - Klipper Firmware
+# SECTION: 3 Klipper Firmware For MKS-SKIPR
 
 Type: cd ~
 
