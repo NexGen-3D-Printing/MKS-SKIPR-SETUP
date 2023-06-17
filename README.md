@@ -78,7 +78,7 @@ Give it a minute or two to reboot and log back in using SSH again, this image of
 
 Once you back into the system, we will now prepare, creat and download the Klipper firmware files we need to flash to the control boards.
 
-# SECTION: 3 Klipper Firmware For MKS-SKIPR
+# SECTION: 3 Create and Flash Klipper Firmware For MKS-SKIPR
 
 Type: cd ~
 
@@ -125,6 +125,14 @@ If that worked, then you will have the firmware file on your PC, now rename it t
 Copy mks_skipr.bin to an SD-Card that has been formatted in FAT32 then shut down your MKS-SKIPR board and insert the SD-Card into the MCU SD-Card slot, there is two on the board, make sure its the correct one or you may tear a hole in the space time continuum and create some sort of spacial anomoly that will cause a reverse deflagrating implosion.....no not really :)
 
 Power the board up, wait a minute, then powerdown and pull the SD-Card, you have now successfully flashed your MKS-SKIPR board with Klipper.
+
+Section 4: Create and Flash Klipper Firmware for The MKS THR36 and THR42 Tool Head Boards
+
+Before we start, I state this, and to back it up, a quick article that I wish I found before I wasted many days of my life, DO NOT BOTHER WITH CANBUS, its a total crock of shit, and should stay in cars or whatever else its used for.
+
+https://os.ratrig.com/blog/no-you-dont-want-to-use-can/
+
+Thank you Mikkel (https://github.com/miklschmidt)
 
 
 
