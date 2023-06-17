@@ -76,6 +76,25 @@ Once you back into the system, we will now prepare, creat and download the Klipp
 
 SECTION: 5 - Klipper Firmware
 
+Type: cd ~
+
+This ensures you are in the home folder, if you type: ls -a
+
+You will see all the things we just installed, most of these are folders, the one we will be jumping into is "klipper"
+
+Type: cd klipper
+
+Type: make menuconfig
+
+Now you will be in the Klipper firmware configuration menu.
+
+You will need to hit the space bar on this one: Enable extra low-level configuration options
+
+You will now see some addition items appear under it, please select: Micro-Controller Architecture -> Then in the next menu, select: STMicroelectronics STM32 -> then escape back to the main menu.
+
+Next option, select: Processor model -> Please select: STM32F407 -> then escape back to the main menu.
+
+Next option, select Bootloader offset -> Please select: 
 
 
 
