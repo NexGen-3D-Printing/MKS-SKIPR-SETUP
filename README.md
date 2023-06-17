@@ -155,10 +155,7 @@ cd klipper
 make menuconfig
 ```
 Now you will be in the Klipper firmware configuration menu.
-* You will need to hit the space bar on this one: 
-`console
-Enable extra low-level configuration options
-`
+* You will need to hit the space bar on this one: `Enable extra low-level configuration options`
 * You will now see some additional items appear under it, please select: **Micro-Controller Architecture** -> Then in the next menu, select: **Raspberry Pi RP2040**
 * Next option, select: **Bootloader offset** -> Please leave it as: **No bootloader**
 * Next option, make sure its on: **Flash chip (W25Q080 with CLKDIV 2)**
