@@ -90,11 +90,38 @@ Now you will be in the Klipper firmware configuration menu.
 
 You will need to hit the space bar on this one: Enable extra low-level configuration options
 
-You will now see some addition items appear under it, please select: Micro-Controller Architecture -> Then in the next menu, select: STMicroelectronics STM32 -> then escape back to the main menu.
+You will now see some addition items appear under it, please select: Micro-Controller Architecture -> Then in the next menu, select: STMicroelectronics STM32
 
-Next option, select: Processor model -> Please select: STM32F407 -> then escape back to the main menu.
+Next option, select: Processor model -> Please select: STM32F407
 
-Next option, select Bootloader offset -> Please select: 
+Next option, select: Bootloader offset -> Please select: 48KiB bootloader
+
+Next option, select: Clock Reference -> Please select: 8 MHz crystal
+
+Next option, select: Communication interface -> Please select: Serial (on USART1 PA10/PA9)
+
+Next Option "Buad rate for serial port" leave this at 250000, if its set to something else, then change it to 250000
+
+Ignore the last option about GPIO pins as this is not required.
+
+Now you can press Q and a save prompt will pop up, click Y to save.
+
+Now that we have configured everything, we can now compile the firmware.
+
+Type: make
+
+Look mum, I'm a programming guru :) -> wait for that to complete.
+
+Now, create a folder on your PC, I went with a folder called klipper on my C drive, for simplistic reasons.
+
+Now open a fress command prompt or power shell promt and past the following line into it, but change the username to the one you setup, and change the IP address to your one: scp nexgen3d@192.68.0.123:~/klipper/out/klipper.bin C:\klipper\klipper.bin
+
+If that worked, then you will have the firmware file on your PC, now rename it to: mks_skipr.bin
+
+Copy mks_skipr.bin to an SD-Card that has been formatted in FAT32 then shut down your MKS-SKIPR board and insert the SD-Card into the MCU SD-Card slot, there is two on the board, make sure its the correct one or you may tear a hole in the space time continuum and create some sort of spacial anomoly that will cause a reverse deflagrating implosion.....no not really :)
+
+Power the board up, wait a minute, then powerdown and pull the SD-Card, you have now successfully flashed your MKS-SKIPR board with Klipper.
+
 
 
 
