@@ -132,7 +132,45 @@ Before we start, I state this, and to back it up, a quick article that I wish I 
 
 https://os.ratrig.com/blog/no-you-dont-want-to-use-can/
 
-Thank you Mikkel (https://github.com/miklschmidt)
+Thank you Mikkel (https://github.com/miklschmidt) I only wish I had found your article before I flushed days of my time down the toilet hunting and finding bugs and gremmlins with this BS called CAN.
+
+Now that my rant is out of the way, we can begin.
+
+Log back into your board via SSH
+
+Type: ```python
+cd ~
+```
+
+This ensures you are in the home folder, if you type: ls -a
+
+You will see all the things we just installed, most of these are folders, the one we will be jumping into is "klipper"
+
+Type: cd klipper
+
+Type: make menuconfig
+
+Now you will be in the Klipper firmware configuration menu.
+
+You will need to hit the space bar on this one: Enable extra low-level configuration options
+
+You will now see some addition items appear under it, please select: Micro-Controller Architecture -> Then in the next menu, select: STMicroelectronics STM32
+
+Next option, select: Processor model -> Please select: STM32F407
+
+Next option, select: Bootloader offset -> Please select: 48KiB bootloader
+
+Next option, select: Clock Reference -> Please select: 8 MHz crystal
+
+Next option, select: Communication interface -> Please select: Serial (on USART1 PA10/PA9)
+
+Next Option "Buad rate for serial port" leave this at 250000, if its set to something else, then change it to 250000
+
+Ignore the last option about GPIO pins as this is not required.
+
+Now you can press Q and a save prompt will pop up, click Y to save.
+
+
 
 
 
