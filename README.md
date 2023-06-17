@@ -170,7 +170,8 @@ Now you can press `Q` and a save prompt will pop up, click `Y` to save.
 
 Now you will need to connect the THR board to your PC via a USB cable, set the appropriate jumper to USB Power, then connect to the PC, once connected, press hold down the `Boot` button then press and release the `Reset` button, then you can release the `Boot` button and if all went well, you will have a flash drive show up as `RPI_RP2` just drag and drop the klipper.uf2 firmware file into this flash drive, and in a second it will self flash and reboot itself, all done.
 
-### Note: Make sure you change the USB power jumper back to board power or you run the risk of frying something
+## Note: Make sure you change the USB power jumper back to board power or you run the risk of frying something
+
 
 
 
