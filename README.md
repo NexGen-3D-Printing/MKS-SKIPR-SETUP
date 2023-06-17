@@ -130,9 +130,9 @@ Power the board up, wait a minute, then powerdown and pull the SD-Card, you have
 
 Before we start, I state this, and to back it up, a quick article that I wish I found before I wasted many days of my life, DO NOT BOTHER WITH CANBUS, its a total crock of shit, and should stay in cars or whatever else its used for.
 
-https://os.ratrig.com/blog/no-you-dont-want-to-use-can/
+`https://os.ratrig.com/blog/no-you-dont-want-to-use-can/`
 
-Thank you Mikkel (https://github.com/miklschmidt) I only wish I had found your article before I flushed days of my time down the toilet hunting and finding bugs and gremmlins with this BS called CAN.
+Thank you Mikkel `https://github.com/miklschmidt` I only wish I had found your article before I flushed days of my time down the toilet hunting and finding bugs and gremmlins with this BS called CAN.
 
 Now that my rant is out of the way, we can begin.
 
@@ -145,7 +145,7 @@ cd ~
 ```console
 ls -a
 ```
-You will see all the things we just installed, most of these are folders, the one we will be jumping into is "klipper"
+You will see all the things we just installed, most of these are folders, the one we will be jumping into is `klipper`
 * Type: 
 ```console
 cd klipper
@@ -158,13 +158,13 @@ Now you will be in the Klipper firmware configuration menu.
 * You will need to hit the space bar on this one: `Enable extra low-level configuration options`
 * You will now see some additional items appear under it, please select: `Micro-Controller Architecture` Then in the next menu, select: `Raspberry Pi RP2040`
 * Next option, select: `Bootloader offset` Please leave it as: `No bootloader`
-* Next option, make sure its on: **Flash chip (W25Q080 with CLKDIV 2)**
-* Next option, select: **Communication interface** -> Please select: **USB**
-* Next Option: **USB ids** leave this alone
-* Next Option: **GPIO pins** leave this alone
+* Next option, make sure its on: `Flash chip (W25Q080 with CLKDIV 2)` If not change it
+* Next option, select: `Communication interface` Please select: `USB`
+* Next Option: `USB ids` leave this alone
+* Next Option: `GPIO pins` leave this alone
 
 
-Now you can press Q and a save prompt will pop up, click Y to save.
+Now you can press `Q` and a save prompt will pop up, click `Y` to save.
 
 
 
