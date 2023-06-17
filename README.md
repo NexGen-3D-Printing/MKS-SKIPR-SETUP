@@ -138,7 +138,7 @@ Now that my rant is out of the way, we can begin.
 
 Log back into your board via SSH
 
-Type: **cd ~**
+> Type: "cd ~"
 
 This ensures you are in the home folder, if you type: ls -a
 
