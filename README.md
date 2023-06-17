@@ -126,7 +126,7 @@ Copy mks_skipr.bin to an SD-Card that has been formatted in FAT32 then shut down
 
 Power the board up, wait a minute, then powerdown and pull the SD-Card, you have now successfully flashed your MKS-SKIPR board with Klipper.
 
-Section 4: Create and Flash Klipper Firmware for The MKS THR36 and THR42 Tool Head Boards
+# Section 4: Create and Flash Klipper Firmware for The MKS THR36 and THR42 Tool Head Boards
 
 Before we start, I state this, and to back it up, a quick article that I wish I found before I wasted many days of my life, DO NOT BOTHER WITH CANBUS, its a total crock of shit, and should stay in cars or whatever else its used for.
 
@@ -154,25 +154,15 @@ cd klipper
 ```console
 make menuconfig
 ```
-
-
 Now you will be in the Klipper firmware configuration menu.
+* You will need to hit the space bar on this one: **Enable extra low-level configuration options**
+* You will now see some additional items appear under it, please select: **Micro-Controller Architecture** -> Then in the next menu, select: **Raspberry Pi RP2040**
+* Next option, select: **Bootloader offset** -> Please leave it as: **No bootloader**
+* Next option, make sure its on: **Flash chip (W25Q080 with CLKDIV 2)**
+* Next option, select: **Communication interface** -> Please select: **USB**
+* Next Option: **USB ids** leave this alone
+* Next Option: **GPIO pins** leave this alone
 
-You will need to hit the space bar on this one: Enable extra low-level configuration options
-
-You will now see some addition items appear under it, please select: Micro-Controller Architecture -> Then in the next menu, select: STMicroelectronics STM32
-
-Next option, select: Processor model -> Please select: STM32F407
-
-Next option, select: Bootloader offset -> Please select: 48KiB bootloader
-
-Next option, select: Clock Reference -> Please select: 8 MHz crystal
-
-Next option, select: Communication interface -> Please select: Serial (on USART1 PA10/PA9)
-
-Next Option "Buad rate for serial port" leave this at 250000, if its set to something else, then change it to 250000
-
-Ignore the last option about GPIO pins as this is not required.
 
 Now you can press Q and a save prompt will pop up, click Y to save.
 
