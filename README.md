@@ -70,6 +70,14 @@ You will see a promt asking to add this module to the update module, should alre
 
 And lastly, you will see a prompt to rebbot now, change the N to a Y and press enter.
 
+Give it a minute or two to reboot and log back in using SSH again, this image of Armbian is quite fast, and boots very quickly, unlike the version supplied from Makerbase.
+
+Once you back into the system, we will now prepare, creat and download the Klipper firmware files we need to flash to the control boards.
+
+SECTION: 5 - Klipper Firmware
+
+
+
 
 
 
