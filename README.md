@@ -1,8 +1,10 @@
 # MKS-CANBUS
 
-# Section 1: Install the Operating System on The MKS-SKIPR (Also The MKS-PI)
+## Section 1: 
 
-Setting Up Klipper ON the MKS-SKIPR Main Controll Board and the THR36/42 Tool Head Board
+### Install the Operating System on The MKS-SKIPR (Also The MKS-PI)
+
+Setting Up Klipper ON the [MKS-SKIPR](https://nexgen-printing.com.au/online-store/ols/products/makerbase-mks-skipr-3d-printer-control-board-runs-fluidd-os-voron-klipper-onboard) Main Control Board and the **THR36/42** Tool Head Board
 
 Download the image file from here: https://github.com/redrathnure/armbian-mkspi/releases
 
@@ -136,7 +138,7 @@ Before we start, I state this, and to back it up, a quick article that I wish I 
 
 Thank you Mikkel `https://github.com/miklschmidt` I only wish I had found your article before I flushed days of my time down the toilet hunting and finding bugs and gremmlins with this BS called CAN.
 
-#### Now that my rant is out of the way, we can begin, Log back into your board via SSH
+**Now that my rant is out of the way, we can begin, Log back into your board via SSH**
 * Type:
 ```console
 cd ~
@@ -145,7 +147,7 @@ cd ~
 ```console
 ls -a
 ```
-You will see all the things we just installed, most of these are folders, the one we will be jumping into is `klipper`
+**You will see all the things we just installed, most of these are folders, the one we will be jumping into is** `klipper`
 * Type: 
 ```console
 cd klipper
@@ -154,7 +156,7 @@ cd klipper
 ```console
 make menuconfig
 ```
-Now you will be in the Klipper firmware configuration menu.
+**Now you will be in the Klipper firmware configuration menu.**
 * You will need to hit the space bar on this one: `Enable extra low-level configuration options`
 * You will now see some additional items appear under it, please select: `Micro-Controller Architecture` Then in the next menu, select: `Raspberry Pi RP2040`
 * Next option, select: `Bootloader offset` Please leave it as: `No bootloader`
@@ -162,7 +164,7 @@ Now you will be in the Klipper firmware configuration menu.
 * Next option, select: `Communication interface` Please select: `USB`
 * Next Option: `USB ids` leave this alone
 * Next Option: `GPIO pins` leave this alone
-Now you can press `Q` and a save prompt will pop up, click `Y` to save.
+**Now you can press `Q` and a save prompt will pop up, click `Y` to save.**
 
 ### Transfer the firmware to your PC
 * Now, using the folder we created on our PC in the previous section `c:\klipper`
