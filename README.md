@@ -156,9 +156,9 @@ cd klipper
 ```
 
 Type: 
-```shell
+``shell
 make menuconfig
-```
+``
 
 Now you will be in the Klipper firmware configuration menu.
 
