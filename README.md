@@ -74,7 +74,7 @@ Give it a minute or two to reboot and log back in using SSH again, this image of
 
 Once you back into the system, we will now prepare, creat and download the Klipper firmware files we need to flash to the control boards.
 
-SECTION: 5 - Klipper Firmware
+# SECTION: 5 - Klipper Firmware
 
 Type: cd ~
 
