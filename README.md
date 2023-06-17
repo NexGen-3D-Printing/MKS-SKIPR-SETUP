@@ -138,19 +138,27 @@ Now that my rant is out of the way, we can begin.
 
 Log back into your board via SSH
 
+Type:
+
 ```shell
 cd ~
 ```
 
-Type: cd ~
+
 
 This ensures you are in the home folder, if you type: ls -a
 
 You will see all the things we just installed, most of these are folders, the one we will be jumping into is "klipper"
 
-Type: cd klipper
+Type: 
+```shell
+cd klipper
+```
 
-Type: make menuconfig
+Type: 
+```shell
+make menuconfig
+```
 
 Now you will be in the Klipper firmware configuration menu.
 
