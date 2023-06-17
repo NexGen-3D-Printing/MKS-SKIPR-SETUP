@@ -118,7 +118,7 @@ Look mum, I'm a programming guru :) -> wait for that to complete.
 
 Now, create a folder on your PC, I went with a folder called klipper on my C drive, for simplistic reasons.
 
-Now open a fress command prompt or power shell promt and past the following line into it, but change the username to the one you setup, and change the IP address to your one: scp nexgen3d@192.68.0.123:~/klipper/out/klipper.bin C:\klipper\klipper.bin
+Now open a fresh command prompt or power shell promt and past the following line into it, but change the username to the one you setup, and change the IP address to your one: scp nexgen3d@192.68.0.123:~/klipper/out/klipper.bin C:\klipper\klipper.bin
 
 If that worked, then you will have the firmware file on your PC, now rename it to: mks_skipr.bin
 
@@ -162,9 +162,17 @@ Now you will be in the Klipper firmware configuration menu.
 * Next option, select: `Communication interface` Please select: `USB`
 * Next Option: `USB ids` leave this alone
 * Next Option: `GPIO pins` leave this alone
-
-
 Now you can press `Q` and a save prompt will pop up, click `Y` to save.
+
+**Transfer the firmware to your PC**
+* Now, using the folder we created on our PC in the previous section `c:\klipper`
+* Open a fresh command prompt or power shell prompt and paste the following line into it, but change the username to the one you setup, and change the IP address to your own: `scp nexgen3d@192.68.0.123:~/klipper/out/klipper.uf2 C:\klipper\klipper.uf2`
+
+Now you will need to connect the THR board to your PC via a USB cable, set the appropriate jumper to USB Power, then connect to the PC, once connected, press hold down the `Boot` button then press and release the `Reset` button, then you can release the `Boot` button and if all went well, you will have a flash drive show up as `RPI_RP2` just drag and drop the klipper.uf2 firmware file into this flash drive, and in a second it will self flash and reboot itself, all done.
+
+**Note: Make sure you change the USB power jumper back to board power or you run the risk of frying something**
+
+
 
 
 
