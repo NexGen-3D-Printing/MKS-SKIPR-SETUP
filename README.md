@@ -126,7 +126,9 @@ Copy mks_skipr.bin to an SD-Card that has been formatted in FAT32 then shut down
 
 Power the board up, wait a minute, then powerdown and pull the SD-Card, you have now successfully flashed your MKS-SKIPR board with Klipper.
 
-# Section 4: Create and Flash Klipper Firmware for The MKS THR36 and THR42 Tool Head Boards
+## Section 4: 
+
+### Create and Flash Klipper Firmware for The MKS THR36 and THR42 Tool Head Boards
 
 Before we start, I state this, and to back it up, a quick article that I wish I found before I wasted many days of my life, DO NOT BOTHER WITH CANBUS, its a total crock of shit, and should stay in cars or whatever else its used for.
 
@@ -134,9 +136,7 @@ Before we start, I state this, and to back it up, a quick article that I wish I 
 
 Thank you Mikkel `https://github.com/miklschmidt` I only wish I had found your article before I flushed days of my time down the toilet hunting and finding bugs and gremmlins with this BS called CAN.
 
-### Now that my rant is out of the way, we can begin.
-
-#### Log back into your board via SSH
+#### Now that my rant is out of the way, we can begin, Log back into your board via SSH
 * Type:
 ```console
 cd ~
