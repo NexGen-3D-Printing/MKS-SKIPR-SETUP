@@ -137,26 +137,20 @@ Thank you Mikkel (https://github.com/miklschmidt) I only wish I had found your a
 Now that my rant is out of the way, we can begin.
 
 Log back into your board via SSH
-
-Type:
-
-```shell
+* Type:
+```console
 cd ~
 ```
-
-
-
-This ensures you are in the home folder, if you type: ls -a
-
+* This ensures you are in the home folder, if you type: 
+```console
+ls -a
+```
 You will see all the things we just installed, most of these are folders, the one we will be jumping into is "klipper"
-
-Type: 
-```shell
+* Type: 
+```console
 cd klipper
 ```
-
-Type: 
-
+* Type: 
 ```console
 make menuconfig
 ```
