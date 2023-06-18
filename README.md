@@ -1,17 +1,20 @@
-# MKS-CANBUS
+# MKS-SKIPR-SETUP
 
 ## Section 1: 
 
 ### Install the Operating System on The MKS-SKIPR (Also The MKS-PI)
 
-Setting Up Klipper ON the [MKS-SKIPR](https://nexgen-printing.com.au/online-store/ols/products/makerbase-mks-skipr-3d-printer-control-board-runs-fluidd-os-voron-klipper-onboard) Main Control Board and the **THR36/42** Toolhead Board
+**Setting Up Klipper ON the `[MKS-SKIPR](https://nexgen-printing.com.au/online-store/ols/products/makerbase-mks-skipr-3d-printer-control-board-runs-fluidd-os-voron-klipper-onboard)` Main Control Board and the `THR36/42` Toolhead Board**
 
-Download the image file from here: https://github.com/redrathnure/armbian-mkspi/releases
+**This tutorial was done via Windows (Please Dont Flame Me :), but can be easily addapted to MacOS or your faverite Linux flavour.*
 
-Install in the SD Card or eMMC via Rufus: https://rufus.ie/en/
-
-Recommend plugging the MKS-SKIPR or MKS-PI directly into ethernet for the primary setup
-
+* Download the image file from here: `[Armbian-MKSPI](https://github.com/redrathnure/armbian-mkspi/releases)`
+** I recommend the bullseye current version, through all my testing, this was the fastest to boot and had no issues that I could find, if the something has changed on that repo, I will mirror the version of Armbian that I used `link will be added`**
+* Flash the above image to your the SD Card or eMMC via Rufus: `[RUFUS](https://rufus.ie/en/)`
+* I highly recommend plugging the MKS-SKIPR or MKS-PI directly into ethernet for the primary setup and will save you lots of issues, wifi can later be setup via `Klipperscreen` or through `SSH` by running this command:
+```console
+sudo armbian-config
+```
 Insert/connect your flash drive of choice and boot up the control board
 
 If you have a display connected, you can obtain the IP address from there, if not, try an app called "FING" for your smart phone or any other app similar and scan your network to find the IP address asigned to the control-board.
