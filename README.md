@@ -80,11 +80,16 @@ Give it a minute or two to reboot and log back in using SSH again, this image of
 
 Once you back into the system, we will now prepare, creat and download the Klipper firmware files we need to flash to the control boards.
 
-# SECTION: 3 Create and Flash Klipper Firmware For MKS-SKIPR
+## SECTION: 3 
 
-Type: cd ~
+### Create and Flash Klipper Firmware For MKS-SKIPR
 
-This ensures you are in the home folder, if you type: ls -a
+* Type: 
+```console
+cd ~
+```
+
+This ensures you are in the home folder, if you type: ```console ls -a```
 
 You will see all the things we just installed, most of these are folders, the one we will be jumping into is "klipper"
 
