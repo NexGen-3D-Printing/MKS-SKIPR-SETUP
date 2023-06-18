@@ -89,7 +89,10 @@ Once you back into the system, we will now prepare, creat and download the Klipp
 cd ~
 ```
 
-This ensures you are in the home folder, if you type: ```console ls -a```
+* This ensures you are in the home folder, if you type: 
+```console
+ls -a
+```
 
 You will see all the things we just installed, most of these are folders, the one we will be jumping into is "klipper"
 
@@ -152,7 +155,7 @@ cd ~
 ```console
 ls -a
 ```
-**You will see all the things we just installed, most of these are folders, the one we will be jumping into is** `klipper`
+**You will see a folder called `**`klipper`**` this is where we are headed again.
 * Type: 
 ```console
 cd klipper
