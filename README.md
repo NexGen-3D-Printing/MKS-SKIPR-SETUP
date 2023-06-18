@@ -4,7 +4,7 @@
 
 ### Install the Operating System on The MKS-SKIPR (Also The MKS-PI)
 
-**Setting Up Klipper ON the `[MKS-SKIPR](https://nexgen-printing.com.au/online-store/ols/products/makerbase-mks-skipr-3d-printer-control-board-runs-fluidd-os-voron-klipper-onboard)` Main Control Board and the `THR36/42` Toolhead Board**
+Setting Up Klipper ON the `[MKS-SKIPR](https://nexgen-printing.com.au/online-store/ols/products/makerbase-mks-skipr-3d-printer-control-board-runs-fluidd-os-voron-klipper-onboard)` Main Control Board and the `THR36/42` Toolhead Board
 
 **This tutorial was done via Windows (Please Dont Flame Me :), but can be easily addapted to MacOS or your faverite Linux flavour.*
 
