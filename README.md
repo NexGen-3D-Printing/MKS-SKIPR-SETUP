@@ -140,9 +140,9 @@ scp nexgen3d@192.68.0.123:~/klipper/out/klipper.bin C:\klipper\klipper.bin
 
 **Before we start, I state this, and to back it up, a quick article that I wish I found before I wasted many days of my life, DO NOT BOTHER WITH CANBUS, its a total crock of shit, and should stay in cars or whatever else its used for.**
 
-`https://os.ratrig.com/blog/no-you-dont-want-to-use-can/`
+https://os.ratrig.com/blog/no-you-dont-want-to-use-can/
 
-Thank you Mikkel `https://github.com/miklschmidt` I only wish I had found your article before I flushed days of my time down the toilet hunting and finding bugs and gremmlins with this BS called CAN.
+Thank you Mikkel https://github.com/miklschmidt I only wish I had found your article before I flushed days of my time down the toilet hunting and finding bugs and gremmlins with this BS called CAN.
 
 **Now that my rant is out of the way, we can begin, Log back into your board via SSH**
 * Type:
