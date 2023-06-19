@@ -13,7 +13,7 @@ Setting Up Klipper ON the [MKS-SKIPR](https://nexgen-printing.com.au/online-stor
 * Download the image file from here: [Armbian-MKSPI](https://github.com/redrathnure/armbian-mkspi/releases)
 *I recommend the bullseye current version, through all my testing, this was the fastest to boot and had no issues that I could find, if the something has changed on that repo, I will mirror the version of Armbian that I used link will be added*
 * Flash the above image to your the SD Card or eMMC via Rufus: [RUFUS](https://rufus.ie/en/)
-* I highly recommend plugging the MKS-SKIPR or MKS-PI directly into ethernet for the primary setup and will save you lots of issues, wifi can later be setup via `[Klipperscreen](https://klipperscreen.readthedocs.io/en/latest/)` or through `SSH` by running this command:
+* I highly recommend plugging the MKS-SKIPR or MKS-PI directly into ethernet for the primary setup and will save you lots of issues, wifi can later be setup via [Klipperscreen](https://klipperscreen.readthedocs.io/en/latest/) or through `SSH` by running this command:
 ```console
 sudo armbian-config
 ```
