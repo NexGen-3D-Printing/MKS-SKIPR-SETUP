@@ -9,7 +9,7 @@ Setting Up Klipper ON the [MKS-SKIPR](https://nexgen-printing.com.au/online-stor
 **This tutorial was done via Windows (Please Dont Flame Me :), but can be easily addapted to MacOS or your faverite Linux flavour.*
 
 * Download the image file from here: [Armbian-MKSPI](https://github.com/redrathnure/armbian-mkspi/releases)
-**I recommend the bullseye current version, through all my testing, this was the fastest to boot and had no issues that I could find, if the something has changed on that repo, I will mirror the version of Armbian that I used link will be added*
+*I recommend the bullseye current version, through all my testing, this was the fastest to boot and had no issues that I could find, if the something has changed on that repo, I will mirror the version of Armbian that I used link will be added*
 * Flash the above image to your the SD Card or eMMC via Rufus: [RUFUS](https://rufus.ie/en/)
 * I highly recommend plugging the MKS-SKIPR or MKS-PI directly into ethernet for the primary setup and will save you lots of issues, wifi can later be setup via `[Klipperscreen](https://klipperscreen.readthedocs.io/en/latest/)` or through `SSH` by running this command:
 ```console
@@ -17,7 +17,7 @@ sudo armbian-config
 ```
 * Insert/connect your flash drive of choice and boot up the control board, note if using and SD Card there is two slots, youy must use the one marked `HOST-TF`
 * If you have a display connected, you can obtain the IP address from there, if not, try an app called [FING for Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_AU&gl=US) or [FING for Apple](https://apps.apple.com/us/app/fing-network-scanner/id430921107) for your smart phone or any other app similar and scan your network to find the IP address asigned to the control-board, will ba called `mks-pi`, or you could also find it via your router/switch.
-**Note:** **You can plug in a HDMI screen to the HDMI port, but this must be done before you power up the board, or the display output will not work.*
+**Note:** *You can plug in a HDMI screen to the HDMI port, but this must be done before you power up the board, or the display output will not work.*
 * Once you have the IP address, just use a command promp in Windows, you dont need putty, the default command promt will work just fine, and log into your control board using the following command, but change the ip address to your specific address: 
 ```console
 ssh root@192.168.0.123
@@ -73,20 +73,14 @@ cd ~ && git clone https://github.com/th33xitus/kiauh.git
 **After all that has completed, you will be back in the [KIAUH](https://github.com/th33xitus/kiauh) Interface again, and we are now ready to install the GUI/Interface of your choice, for me, I like Mainsail, but you might not, so install the one of your choice, but for the printers, control boards and upgrade kits I sell, I only support Mainsail, I do this as its easier for me to assist my customers if I choose just one.**
 * Select Option 3: `Mainsail` More of that gobbley-gook text stuff, wait, then another prompt to download macros, type `Y` and press `Enter`, after thats completed, you will be back in the [KIAUH](https://github.com/th33xitus/kiauh) interface.
 * Next we will install [Klipperscreen](https://klipperscreen.readthedocs.io/en/latest/), I support the 3.5" and 5" displays from Makerbase, the controlboard can run other HDMI displays, if you are not planning on running a touchscreen, then you can skip this next module.
+* Select Option: 5 -> [Klipperscreen](https://klipperscreen.readthedocs.io/en/latest/) -> Again, more crazy stuff happening, just wait for all the cool code like stuff to complete, this one can take a while, so more coffee, or maybe beer again :)
+* lastly, you can safely quit KIAUH and you will be in the terminal, please type:
+```console
+sudo reboot
+```
+* Give it a minute or two to reboot and log back in using `SSH` again, this image of Armbian is quite fast, and boots very quickly, unlike the version supplied from Makerbase.
 
-Select Option: 5 -> [Klipperscreen](https://klipperscreen.readthedocs.io/en/latest/) -> Again, more crazy stuff happening, just wait for all the cool code like stuff to complete, this one can take a while, so more coffee, or maybe beer :)
-
-Now last module to install, only if you plan to use a USB webcam, if you are, please be aware of the very small 5v power budget of the MKS-SKIPR, the USB 5v is shared with SOC and can be limiting, so you may want to invest in a powered USB Hub, try and find one that is powered by a 24v power brick, as this will simplify your wiring, I'm personally not a fan of those little cheap buck conveters, I have had them fail to many times in the past, most printers work onj 24v, so try to use 24v parts.
-
-Select Option 11: Crowsnest -> Again, more hacker like cool movie code like stuff.
-
-You will see a promt asking to add this module to the update module, should already have Y typed on the screen, so just press enter, this just adds Cowsnest to the nice GUI update menu in Mainsail make it a simple procedure to update the software in the future....we hope :)
-
-And lastly, you will see a prompt to rebbot now, change the N to a Y and press enter.
-
-Give it a minute or two to reboot and log back in using SSH again, this image of Armbian is quite fast, and boots very quickly, unlike the version supplied from Makerbase.
-
-Once you back into the system, we will now prepare, creat and download the Klipper firmware files we need to flash to the control boards.
+**Once you're back into the system, we will now prepare, create and flash the Klipper firmware filesto the MCU on the control boards** *(This step is not required for the MKS-PI, its only required for the MKS-SKIPR)*.
 
 ## SECTION: 3 
 
@@ -128,7 +122,7 @@ make
 ```
 **Look mum, I'm a programming guru :) -> wait for that to complete.**
 
-**Now, create a folder on your PC, I went with a folder called `klipper` on my `C drive`, for simplistic reasons.
+**Now, create a folder on your PC, I went with a folder called `klipper` on my `C drive`, for simplistic reasons.**
 * Now open a fresh command prompt or power shell promt and past the following line into it, but change the username to the one you setup, and change the IP address to your one: 
 ```console
 scp nexgen3d@192.68.0.123:~/klipper/out/klipper.bin C:\klipper\klipper.bin
