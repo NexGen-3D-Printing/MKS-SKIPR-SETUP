@@ -4,72 +4,77 @@
 
 ### Install the Operating System on The MKS-SKIPR (Also The MKS-PI)
 
-Setting Up Klipper ON the `[MKS-SKIPR](https://nexgen-printing.com.au/online-store/ols/products/makerbase-mks-skipr-3d-printer-control-board-runs-fluidd-os-voron-klipper-onboard)` Main Control Board and the `THR36/42` Toolhead Board
+Setting Up Klipper ON the [MKS-SKIPR](https://nexgen-printing.com.au/online-store/ols/products/makerbase-mks-skipr-3d-printer-control-board-runs-fluidd-os-voron-klipper-onboard) Main Control Board and the `THR36/42` Toolhead Board
 
 **This tutorial was done via Windows (Please Dont Flame Me :), but can be easily addapted to MacOS or your faverite Linux flavour.*
 
-* Download the image file from here: `[Armbian-MKSPI](https://github.com/redrathnure/armbian-mkspi/releases)`
-** I recommend the bullseye current version, through all my testing, this was the fastest to boot and had no issues that I could find, if the something has changed on that repo, I will mirror the version of Armbian that I used `link will be added`**
-* Flash the above image to your the SD Card or eMMC via Rufus: `[RUFUS](https://rufus.ie/en/)`
-* I highly recommend plugging the MKS-SKIPR or MKS-PI directly into ethernet for the primary setup and will save you lots of issues, wifi can later be setup via `Klipperscreen` or through `SSH` by running this command:
+* Download the image file from here: [Armbian-MKSPI](https://github.com/redrathnure/armbian-mkspi/releases)
+**I recommend the bullseye current version, through all my testing, this was the fastest to boot and had no issues that I could find, if the something has changed on that repo, I will mirror the version of Armbian that I used link will be added*
+* Flash the above image to your the SD Card or eMMC via Rufus: [RUFUS](https://rufus.ie/en/)
+* I highly recommend plugging the MKS-SKIPR or MKS-PI directly into ethernet for the primary setup and will save you lots of issues, wifi can later be setup via `[Klipperscreen](https://klipperscreen.readthedocs.io/en/latest/)` or through `SSH` by running this command:
 ```console
 sudo armbian-config
 ```
-Insert/connect your flash drive of choice and boot up the control board
+* Insert/connect your flash drive of choice and boot up the control board, note if using and SD Card there is two slots, youy must use the one marked `HOST-TF`
+* If you have a display connected, you can obtain the IP address from there, if not, try an app called [FING for Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_AU&gl=US) or [FING for Apple](https://apps.apple.com/us/app/fing-network-scanner/id430921107) for your smart phone or any other app similar and scan your network to find the IP address asigned to the control-board, will ba called `mks-pi`, or you could also find it via your router/switch.
+**Note:** **You can plug in a HDMI screen to the HDMI port, but this must be done before you power up the board, or the display output will not work.*
+* Once you have the IP address, just use a command promp in Windows, you dont need putty, the default command promt will work just fine, and log into your control board using the following command, but change the ip address to your specific address: 
+```console
+ssh root@192.168.0.123
+```
+* Default password is: `1234`
+* Now it will ask you to set a password for root, once that is completed it will ask you to create a user account, I will use `nexgen3d` this is the account you and the printer will use, then it will ask you to set a password for that account as well.
+* Once that has all completed, type the following and it will kick you out of SSH: 
+```console
+exit
+```
+* Log back into the board using the following, but replace the user name with the one you created in the previous step and your IP address for the board: 
+```console
+ssh nexgen3d@192.168.0.123
+```
+* Once your back in, run: 
+```console
+sudo apt update && sudo apt upgrade
+```
+* Next step is to go have a coffee, or a beer, the latter is prefered **(as this can take a litle while)*.
+* Once that has completed (the update, not the beer), type: 
+```console
+sudo reboot
+```
+* After the reboot, log back into the board using the following, but replace the user name with the one you created in the previous step and your IP address for the board: 
+```console
+ssh nexgen3d@192.168.0.123
+```
+**Stay logged in and move onto Section 2**
 
-If you have a display connected, you can obtain the IP address from there, if not, try an app called "FING" for your smart phone or any other app similar and scan your network to find the IP address asigned to the control-board.
+## Section 2: 
 
-Note, you can just plug in a HDMI screen to the HDMI port, but this must be done before you power up the board, or the display output will not work.
+### Install Klipper
 
-Once you have the IP address, just use command promp and log into your control board using: ssh root@192.168.0.123 (Replace this address with your own)
+* Now we are getting to the good part, installing Klipper, make sure you are in your home folder, by typing: 
+```console
+cd ~
+```
+* We are now going to install [KIAUH](https://github.com/th33xitus/kiauh), no not the car, the awesome easy to use Klipper automated install tool: 
+```console
+cd ~ && git clone https://github.com/th33xitus/kiauh.git
+```
+* Once completed, then type: 
+```console
+./kiauh/kiauh.sh
+```
+**You should now see the [KIAUH](https://github.com/th33xitus/kiauh) interface, and we will use this to install Klipper and all required componants.**
+* Select Option 1: `Install` **We will return to this menu after each module has installed*
+* Select Option 1: `Klipper` Select Option 1: `Python 3.x` Leave the next option as `1` and hit enter.
+* Now the base files for Klipper are being installed, you should receive a prompt for your password, completed that and press `Enter`.
+* Coffee time again :) wait for all the packages to install, once completed you will be back into the [KIAUH](https://github.com/th33xitus/kiauh) interface.
+**We are now ready to install the next module, `Moonraker` no not the cool James Bond film from the 80's, but the Moonraker componants for Klipper**
+* In the [KIAUH](https://github.com/th33xitus/kiauh) Interface, Select Option 2: `Moonraker` You will now see a promt to install, please type `Y` and hit `enter`, now wait for all the gobbley-Gook to complete....again.
+**After all that has completed, you will be back in the [KIAUH](https://github.com/th33xitus/kiauh) Interface again, and we are now ready to install the GUI/Interface of your choice, for me, I like Mainsail, but you might not, so install the one of your choice, but for the printers, control boards and upgrade kits I sell, I only support Mainsail, I do this as its easier for me to assist my customers if I choose just one.**
+* Select Option 3: `Mainsail` More of that gobbley-gook text stuff, wait, then another prompt to download macros, type `Y` and press `Enter`, after thats completed, you will be back in the [KIAUH](https://github.com/th33xitus/kiauh) interface.
+* Next we will install [Klipperscreen](https://klipperscreen.readthedocs.io/en/latest/), I support the 3.5" and 5" displays from Makerbase, the controlboard can run other HDMI displays, if you are not planning on running a touchscreen, then you can skip this next module.
 
-Default password is: 1234
-
-Now it will ask you to set a password for root, once that is completed it will ask you to create a user account, I will use "nexgen3d", this is the account you and the printer will use, then it will ask you to set a password for that account.
-
-Once that has all complete, type: exit
-
-Then log back into the board using: ssh nexgen3d@192.168.0.123 (Use your user name you set in the previous step, and replace the IP with the IP of your actual board)
-
-Now run: sudo apt update
-
-Once that has completed, run: sudo apt upgrade
-
-Go have a coffee, or a beer, the latter is prefered.
-
-Once that has completed (the update, not the beer), type: sudo reboot
-
-After the reboot has complete, log back into the board using: ssh nexgen3d@192.168.0.123 (Use your user name you set in the previous step, and replace the IP with the IP of your actual board)
-
-# Section 2: Install Klipper
-
-Now we are getting to the good part, installing Klipper, make sure you are in your home folder, by typing: cd ~
-
-Then type: cd ~ && git clone https://github.com/th33xitus/kiauh.git
-
-Once completed, then type: ./kiauh/kiauh.sh
-
-You should now see the KIAUH interface, and we will use this to install Klipper and all required componants.
-
-Select Option 1: Install -> We will return to this menu after each module has installed.
-
-Select Option 1: Klipper -> Select Option 1: Python 3.x -> Leave the next option as 1 and hit enter.
-
-Now the base files for Klipper are being install, you should receive a prompt for your password, completed that and press enter.
-
-Coffee time again :) wait for all the packages to install, once completed you will be back into the KIAUH interface.
-
-We are now ready to install the next module, Moonraker, no not he James Bond film, but the Moonraker componant for Klipper.
-
-In the KIAH Interface, Select Option 2: Moonraker -> You will now see a promt to install, please type Y and hit enter, now wait for all the gobbledy-Gook to complete....again.
-
-After all that has completed, you will be back in the KIAUH Interface again, and we are now ready to install the GUI/Interface of your choice, for me, I like Mainsail, but you might not, so install the one of your choice, but for the printers, control boards and upgrade kits I sell, I only support Mainsail, I do this as its easier for me to assist my customers.
-
-Select Option 3: Mainsail -> more of that gobbly-gook, wait, then another prompt to download macros, type Y and press enter, after thats completed, you will be back in the KIAUH interface.
-
-Next we will install Klipperscreen, I support the 3.5" and 5" displays from Makerbase, the controlboard can run other HDMI displays, if you are not planning on running a touchscreen, then you can skip this next module.
-
-Select Option: 5 -> Klipperscreen -> Again, more crazy stuff happening, just wait for all the cool code like stuff to complete, this one can take a while, so more coffee, or maybe beer :)
+Select Option: 5 -> [Klipperscreen](https://klipperscreen.readthedocs.io/en/latest/) -> Again, more crazy stuff happening, just wait for all the cool code like stuff to complete, this one can take a while, so more coffee, or maybe beer :)
 
 Now last module to install, only if you plan to use a USB webcam, if you are, please be aware of the very small 5v power budget of the MKS-SKIPR, the USB 5v is shared with SOC and can be limiting, so you may want to invest in a powered USB Hub, try and find one that is powered by a 24v power brick, as this will simplify your wiring, I'm personally not a fan of those little cheap buck conveters, I have had them fail to many times in the past, most printers work onj 24v, so try to use 24v parts.
 
