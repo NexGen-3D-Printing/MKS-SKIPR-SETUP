@@ -185,3 +185,9 @@ Now you will need to connect the THR board to your PC via a USB cable, set the a
 
 If you like what I have done here and would like to support this kind of work, please feel free to purchase something low cost from my website, like a [Nozzle](https://nexgen-printing.com.au/online-store/ols/products/hardened-steel-nozzles-triple-pack-0-dot-4-0-dot-6-0-dot-8) or one of our inhouse designed and manufactured [MK3 Nano Extruders](https://nexgen-printing.com.au/online-store/ols/products/sherpa-micro-nexgen-nano-extruder)
 
+Discord Links
+
+[Makerbase](https://discord.gg/mTvuxFP4Z5)
+
+[NexGen 3D Printing](https://discord.gg/wxgamVME3m)
+
