@@ -1,6 +1,6 @@
 # MKS-SKIPR-SETUP
 
-### This is still a work in progress, and I will update the guide on a regular bassis as well as provide files to support everything
+### This is still a work in progress, and I will update the guide on a regular basis, make corrections as I find them, as well as provide files to support everything.
 
 ## Section 1: 
 
