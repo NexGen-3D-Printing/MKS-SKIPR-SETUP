@@ -1,5 +1,7 @@
 # MKS-SKIPR-SETUP
 
+### This is still a work in progress, and I will update the guide on a regular bassis as well as provide files to support everything
+
 ## Section 1: 
 
 ### Install the Operating System on The MKS-SKIPR (Also The MKS-PI)
@@ -179,23 +181,7 @@ Now you will need to connect the THR board to your PC via a USB cable, set the a
 ### Note: Make sure you change the USB power jumper back to board power or you run the risk of frying something
 
 
+[NexGen 3D Printing}(https://nexgen-printing.com.au/) is a Western Australian based 3D Printing company, we specialise in custom 3D printer upgrades and do our best to promote open source software, we believe, if you dont have full root access, then you generally dont own it.
 
-
-
-
-
-
-
-
-
-
-
-scp nexgen3d@192.68.0.123:~/klipper/out/klipper.bin C:\klipper\klipper.bin
-
-MCU-TF Slot
-
-Install Input Shaper:
-sudo apt install python3-numpy python3-matplotlib libatlas-base-dev
-~/klippy-env/bin/pip install -v numpy
-
+If you like what I have done here and would like to support this kind of work, please feel free to purchase something low cost from my website, like a [Nozzle](https://nexgen-printing.com.au/online-store/ols/products/hardened-steel-nozzles-triple-pack-0-dot-4-0-dot-6-0-dot-8) or one of our inhouse designed and manufactured [MK3 Nano Extruders](https://nexgen-printing.com.au/online-store/ols/products/sherpa-micro-nexgen-nano-extruder)
 
