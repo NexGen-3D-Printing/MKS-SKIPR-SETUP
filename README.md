@@ -181,7 +181,7 @@ Now you will need to connect the THR board to your PC via a USB cable, set the a
 ### Note: Make sure you change the USB power jumper back to board power or you run the risk of frying something
 
 
-[NexGen 3D Printing}(https://nexgen-printing.com.au/) is a Western Australian based 3D Printing company, we specialise in custom 3D printer upgrades and do our best to promote open source software, we believe, if you dont have full root access, then you generally dont own it.
+[NexGen 3D Printing](https://nexgen-printing.com.au/) is a Western Australian based 3D Printing company, we specialise in custom 3D printer upgrades and do our best to promote open source software, we believe, if you dont have full root access, then you generally dont own it.
 
 If you like what I have done here and would like to support this kind of work, please feel free to purchase something low cost from my website, like a [Nozzle](https://nexgen-printing.com.au/online-store/ols/products/hardened-steel-nozzles-triple-pack-0-dot-4-0-dot-6-0-dot-8) or one of our inhouse designed and manufactured [MK3 Nano Extruders](https://nexgen-printing.com.au/online-store/ols/products/sherpa-micro-nexgen-nano-extruder)
 
