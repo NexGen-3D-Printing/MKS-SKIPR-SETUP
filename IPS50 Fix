@@ -1,0 +1,19 @@
+IPS50 HDMI Display
+The Image does not support the IPS50 display (5 inch HDMI IPS - 800x480) out of the box. Reasons are unclear. This is a workaround to get the display running.
+
+Connect to the printer via SSH
+Open boot config sudo nano /boot/armbianEnv.txt
+Add the line extraargs=video=HDMI-A-1:848x480@60e. The screen will be rendered a bit wider than the display is (48px to be precise).
+Open screen calibration sudo nano /etc/X11/xorg.conf.d/99-calibration.conf
+Add rescaling for the touch input (factor 800/848 = 0.9433969)
+Section "InputClass"
+        Identifier      "calibration"
+        MatchProduct    "wch.cn USB2IIC_CTP_CONTROL"
+        Driver "evdev"
+        Option "TransformationMatrix" "0.943396 0 0 0 1 0 0 0 1"
+EndSection
+Specify the correct width in the KlipperScreen config file ~/printer_data/config/KlipperScreen.conf (this can be done via the mainsail web interface too). By adding width (and height). Ensure you add the lines above #~# --- Do not edit below this line. This section is auto generated --- #~# !
+[main]
+width: 800
+height: 480   # optional
+Reboot
