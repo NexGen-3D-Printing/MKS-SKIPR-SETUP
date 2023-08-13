@@ -1,20 +1,21 @@
 
-* The following is fix for multi MCU sync issues, usually an error will happen when homeing, and you will see something like this.
+The following is fix for multi MCU sync issues, usually an error will happen when homeing, and you will see something like this.
 
-* "Communication timeout during homing probe"
+"Communication timeout during homing probe"
 
-* This fix has worked on multiple machines running the SKIPR with the THR36 board in USB Mode, I have not tested this with CAN, it may work, but Im not interested in testing as I see no real reason to run CAN on my machines.
+This fix has worked on multiple machines running the SKIPR with the THR36 board in USB Mode, I have not tested this with CAN, it may work, but Im not interested in testing as I see no real reason to run CAN on my machines.
 
-* To fix the sync home issue with multi MCU follow these instructions:
-```console
-sudo nano /etc/systemd/system/klipper.service
-```
-* Add the follow under the [Service] section:
-```console
+To fix the sync home issue with multi MCU follow these instructions:
+
+Type the following: sudo nano /etc/systemd/system/klipper.service
+
+Add the follow under the [Service] section:
+
 CPUAffinity=3
-```
-* Save: Hold down the ctrl key and pres x, then follow the promts
-* Then type:
-```console
-sudo systemctl restart klipper
-```
+
+Save: Hold down the ctrl key and pres x, then follow the promts
+
+Then type: sudo systemctl restart klipper
+
+And Roberts your Fathers Brother, no more issues.
+
